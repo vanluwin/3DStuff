@@ -305,7 +305,7 @@ class Engine3D : public olcConsoleGameEngine {
                     triProjected.p[2].x, triProjected.p[2].y,
                     triProjected.sym, triProjected.col
                 );
-
+                // Draw triangular structure
                 //DrawTriangle(
                 //    triProjected.p[0].x, triProjected.p[0].y,
                 //    triProjected.p[1].x, triProjected.p[1].y,
