@@ -10,6 +10,12 @@ To compile any CPP code here available on unix based systems, simply do:
 user@computer:~/3DStuff$ make file.cpp  
 ```
 
+## [mazeGenerator](./mazeGenerator.cpp)
+
+Generates a maze.
+
+![mazeGenerator](./readme_imgs/mazeGenerator.gif)
+
 ## [cubeMesh](./cubeMesh.cpp)
 
 Renders a simple cube.
