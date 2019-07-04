@@ -654,18 +654,18 @@ class Engine3D : public olcConsoleGameEngine {
 
                 // Draw the transformed, viewed, clipped, projected, sorted, clipped triangles
                 for (auto &t : listTriangles) {
-                    FillTriangle(
-                        t.p[0].x, t.p[0].y, 
-                        t.p[1].x, t.p[1].y, 
-                        t.p[2].x, t.p[2].y, 
-                        t.sym, t.col
-                    );
+                    //FillTriangle(
+                    //    t.p[0].x, t.p[0].y, 
+                    //    t.p[1].x, t.p[1].y, 
+                    //    t.p[2].x, t.p[2].y, 
+                    //    t.sym, t.col
+                    //);
 
                     DrawTriangle(
                         t.p[0].x, t.p[0].y, 
                         t.p[1].x, t.p[1].y, 
                         t.p[2].x, t.p[2].y, 
-                        PIXEL_SOLID, FG_BLUE
+                        PIXEL_SOLID, FG_WHITE
                     );
                 }
             }
