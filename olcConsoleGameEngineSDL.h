@@ -1151,7 +1151,7 @@ private:
 
 				// Update Title & Present Screen Buffer
 				char s[256];
-				snprintf(s, 256, "OneLoneCoder.com - Console Game Engine (SDL) - %s - FPS: %3.2f", bufAppName, 1.0f / fElapsedTime);
+				snprintf(s, 256, "%s - FPS: %3.2f", bufAppName, 1.0f / fElapsedTime);
 				SDL_SetWindowTitle(m_window, s);
 
 				// Render differences
@@ -1197,7 +1197,6 @@ private:
 				SDL_SetRenderTarget(m_render, nullptr);
 				SDL_RenderCopy(m_render, m_screen, nullptr, nullptr);
 				SDL_RenderPresent(m_render);
-
 
 				// Flip buffers
 				m_nCurrentBuffer = (m_nCurrentBuffer + 1) % 2;
