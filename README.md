@@ -1,4 +1,4 @@
-# 3DStuff
+# Graphical Stuff
 
 This is the place of rest for some codes inspired by [javidx9](https://www.youtube.com/channel/UC-yuWVUplUJZvieEligKBkA) using the [olcConsoleGameEngine](https://github.com/OneLoneCoder/videos/blob/master/olcConsoleGameEngineSDL.h) and [olcPixelGameEngine](https://github.com/OneLoneCoder/olcPixelGameEngine/blob/master/olcPixelGameEngine.h).
 
