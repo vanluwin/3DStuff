@@ -14,14 +14,14 @@ struct mesh {
 };
 
 struct mat4x4 {
-    float m[4][4] = { 0 };
+    float m[4][4] = {{ 0 }};
 };
 
 class Engine3D : public olcConsoleGameEngine {
     private:
         // Field of view
         float fTheta;
-    
+
         mesh meshCube;
         mat4x4 matProj;
 
@@ -32,8 +32,8 @@ class Engine3D : public olcConsoleGameEngine {
             float w = i.x * m.m[0][3] + i.y * m.m[1][3] + i.z * m.m[2][3] + m.m[3][3];
 
             if (w != 0.0f) {
-                o.x /= w; 
-                o.y /= w; 
+                o.x /= w;
+                o.y /= w;
                 o.z /= w;
             }
         }
@@ -44,39 +44,39 @@ class Engine3D : public olcConsoleGameEngine {
         }
 
         bool OnUserCreate() override {
-            
+
             meshCube.tris = {
                 // SOUTH
                 { 0.0f, 0.0f, 0.0f,    0.0f, 1.0f, 0.0f,    1.0f, 1.0f, 0.0f },
                 { 0.0f, 0.0f, 0.0f,    1.0f, 1.0f, 0.0f,    1.0f, 0.0f, 0.0f },
 
-                // EAST                                                      
+                // EAST
                 { 1.0f, 0.0f, 0.0f,    1.0f, 1.0f, 0.0f,    1.0f, 1.0f, 1.0f },
                 { 1.0f, 0.0f, 0.0f,    1.0f, 1.0f, 1.0f,    1.0f, 0.0f, 1.0f },
 
-                // NORTH                                                     
+                // NORTH
                 { 1.0f, 0.0f, 1.0f,    1.0f, 1.0f, 1.0f,    0.0f, 1.0f, 1.0f },
                 { 1.0f, 0.0f, 1.0f,    0.0f, 1.0f, 1.0f,    0.0f, 0.0f, 1.0f },
 
-                // WEST                                                      
+                // WEST
                 { 0.0f, 0.0f, 1.0f,    0.0f, 1.0f, 1.0f,    0.0f, 1.0f, 0.0f },
                 { 0.0f, 0.0f, 1.0f,    0.0f, 1.0f, 0.0f,    0.0f, 0.0f, 0.0f },
 
-                // TOP                                                       
+                // TOP
                 { 0.0f, 1.0f, 0.0f,    0.0f, 1.0f, 1.0f,    1.0f, 1.0f, 1.0f },
                 { 0.0f, 1.0f, 0.0f,    1.0f, 1.0f, 1.0f,    1.0f, 1.0f, 0.0f },
 
-                // BOTTOM                                                    
+                // BOTTOM
                 { 1.0f, 0.0f, 1.0f,    0.0f, 0.0f, 1.0f,    0.0f, 0.0f, 0.0f },
                 { 1.0f, 0.0f, 1.0f,    0.0f, 0.0f, 0.0f,    1.0f, 0.0f, 0.0f },
             };
-            
+
             // Projection Matrix
             // Near Plane
-            float fNear = 0.1f; 
+            float fNear = 0.1f;
             // Far plane
             float fFar = 1000.0f;
-            // Field of View 
+            // Field of View
             float fFov = 90.0f;
             // Aspect Ratio
             float fAspectRatio = (float)ScreenHeight() / (float)ScreenWidth();
@@ -173,7 +173,7 @@ int main() {
 
     Engine3D engine;
 
-    if(engine.ConstructConsole(200, 150, 2, 2)) 
+    if(engine.ConstructConsole(200, 150, 2, 2))
         engine.Start();
     else {
         cout << "Not able to start window!\n";
