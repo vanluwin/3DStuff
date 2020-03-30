@@ -7,7 +7,7 @@ This is the place of rest for some codes inspired by [javidx9](https://www.youtu
 To compile any CPP code here available on unix based systems, simply do:
 
 ```console
-user@computer:~/3DStuff$ make source_file
+user@computer:~/graphical_stuff$ make source_file
 ```
 
 ## [Maze Generator](./proj_rederer/mazeGenerator.cpp)
@@ -40,4 +40,8 @@ Interactive isometric grid.
 
 ![terrainRendering](./readme_imgs/isometric_tiles.png)
 
+## [Universe](./proj_universe/universe.cpp)
 
+Procedurally generated universe simulator.
+
+![terrainRendering](./readme_imgs/universe.png)
